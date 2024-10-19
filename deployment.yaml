@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sravikaextracredit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sravikaassign3
+  template:
+    metadata:
+      labels:
+        app: sravikaassign3
+    spec:
+      containers:
+      - name: sravikaassign3
+        image: sravikaassign3:latest 
+        ports:
+        - containerPort: 8080
